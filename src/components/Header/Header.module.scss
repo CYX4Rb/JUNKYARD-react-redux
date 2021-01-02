@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    justify-content: space-around;
+    min-width: 100%;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+h1 {
+    margin:0px 40px 0 10px;
+    padding-bottom: 7px;
+    
+}
+
+.header__input_search {
+    font-size: 25px;
+    height: 35px;
+    width: 450px;
+    border-radius: 5px;
+    margin-right: 40px;
+    border: 1px solid black;
+}
+
+
+.buttons__button {
+    all: none;
+    margin-right: 60px;
+    font-size: 25px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
