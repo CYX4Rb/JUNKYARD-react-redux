@@ -1,11 +1,13 @@
 .app {
   display: flex;
   flex-direction: column;
+  background-color: rgb(47, 47, 47);
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    border: 2px solid blueviolet;
+    background-image: linear-gradient(to bottom, #a1ffff 0%, #ffffff 100%);
+  }
 }
 
-.wrapper {
-  border: 1px solid blue;
-}
-button {
-  background-color: yellowgreen;
-}
+
