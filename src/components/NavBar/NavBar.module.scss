@@ -1,4 +1,13 @@
 .navbar {
+    display: flex;
     border-radius: 10px;
     background-color: #57e4e4;
+    .navbar__select_country {
+        width: 300px;
+    }
+    .navbar__year {
+        input{
+            border: 3px solid red;
+        }
+    }
 }

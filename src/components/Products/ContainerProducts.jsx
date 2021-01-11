@@ -1,7 +1,7 @@
-import React from 'react'
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import NavBar from '../NavBar/NavBar'
+import ContainerNavBar from '../NavBar/ContainerNavBar'
+
 import Product from './Product/Product'
 import style from './Products.module.scss'
 
@@ -9,7 +9,7 @@ class ContainerProducts extends Component {
 
     render() {
         return <div className = {style.container} >
-            <NavBar />
+            <ContainerNavBar  />
             <div className={style.content}>
                 {this.props.product
                     .map(p =>

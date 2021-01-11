@@ -10,8 +10,10 @@ export const ProductAPI = {
     }
 }
 
-export const UsersAuth  = {
-    addNewUser(name, password){
-        axios.pull('localhost:8080/v1/user/signup', {name, password})
+export const UsersAuthorized  = {
+    addNewUser({name, password}){
+       return axios.post('localhost:8080/v1/user/signup', 
+       {withCredentials: true}, 
+       {name: name, password: password})
     }
 }

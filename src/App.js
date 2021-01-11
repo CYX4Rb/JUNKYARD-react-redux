@@ -7,7 +7,7 @@ import ContainerProducts from './components/Products/ContainerProducts';
 import HomePage from './components/HomePage/HomePage';
 
 import './App.scss';
-import Authorized from './components/Authorized/Authorized';
+import ContainerAuthorization from './components/Authorization/ContainerAuthorization';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <div className = 'wrapper'>
       <Route path='/Products' component={ContainerProducts} exact />
       <Route path='/' component={HomePage} exact />
-      <Route path='/authorized' component={Authorized} exact />
+      <Route path='/authorized' component={ContainerAuthorization} exact />
     </div>
     <Footer />
   </div>
