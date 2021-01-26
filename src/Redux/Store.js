@@ -1,12 +1,14 @@
-import AuthorizationReducer from "./Authorization-reducer";
-import ProductReducer from './Products-reducer'
+import authorizationReducer from "./Authorization-reducer";
+import productReducer from './Products-reducer'
+import navBarReducer from './NavBar-reducer'
 
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunkMiddleware from 'redux-thunk'
 
 const reducers = combineReducers({
-    Products: ProductReducer,
-    Authorization: AuthorizationReducer
+    products: productReducer,
+    authorization: authorizationReducer,
+    navBar: navBarReducer
 })
 
 

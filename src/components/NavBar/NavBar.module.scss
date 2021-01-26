@@ -1,13 +1,22 @@
 .navbar {
     display: flex;
     border-radius: 10px;
-    background-color: #57e4e4;
-    .navbar__select_country {
-        width: 300px;
-    }
+    background-color:rgb(207, 207, 207);
+    /* .navbar__select_country {
+        
+    } */
     .navbar__year {
         input{
             border: 3px solid red;
+        }
+    }
+    .SelectedFilters {
+        border: 2px red solid;
+        .SelectedFilters__element {
+            width: 50px;
+            height: 20px;
+            background-color: red;
+            border: 2px red solid;
         }
     }
 }

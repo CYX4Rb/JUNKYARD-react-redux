@@ -2,11 +2,14 @@ import style from './NavBar.module.scss'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
-const NavBar = ({setSorting}) => {
+const NavBar = ({ setSorting, clearSorting }) => {
+
     const { register, handleSubmit, errors } = useForm()
+
     const onSubmit = data => {
-       setSorting(data)
+        setSorting(data)
     }
+
     return <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.navbar}>
             <select className={style.navbar__select_country} name='country' ref={register} >
@@ -25,26 +28,16 @@ const NavBar = ({setSorting}) => {
             </div>
             <div>
                 <p>min Price</p>
-                <select className={style.navbar__select_country} name='minPrice' ref={register} >
-                    <option value='no_limit'>all</option>
-                    <option value="5000">5000</option>
-                    <option value="10000">10000</option>
-                    <option value="100000">100000</option>
-                </select>
+                <input className={style.navbar__select_country} name='minPrice' ref={register} />
             </div>
             <div>
                 <p>max Price</p>
-                <select className={style.navbar__select_country} name='maxPrice' ref={register} >
-                    <option value='1000'>1000</option>
-                    <option value="10000">10000</option>
-                    <option value="50000">50000</option>
-                    <option value="no_limit">all</option>
-                </select>
+                <input className={style.navbar__select_country} name='maxPrice' ref={register} />
             </div>
             <input type="submit" />
+            <button onClick={clearSorting}>clear</button>
         </div>
     </form>
-
 }
 
 export default NavBar

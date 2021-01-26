@@ -14,7 +14,7 @@ function App() {
   return <div className='app'>
     <Header className='header' />
     <div className = 'wrapper'>
-      <Route path='/Products' component={ContainerProducts} exact />
+      <Route path='/products' component={ContainerProducts} exact />
       <Route path='/' component={HomePage} exact />
       <Route path='/authorized' component={ContainerAuthorization} exact />
     </div>

@@ -7,7 +7,7 @@ let initialState = {
     authorized: false
 }
 
-const AuthorizationReducer = (state = initialState, action) => {
+const authorizationReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_AUTHORIZED:
             return {
@@ -29,4 +29,4 @@ export const getAuthorization = (data) => async dispatch => {
     } 
 }
 
-export default AuthorizationReducer
+export default authorizationReducer

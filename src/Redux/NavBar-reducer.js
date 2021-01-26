@@ -1,5 +1,6 @@
 
 const SET_SORTING = 'SET_SORTING'
+const CLEAR_SORTING = 'CLEAR_SORTING'
 
 let initialState = {
     country: '',
@@ -9,7 +10,7 @@ let initialState = {
     maxPrice: ''
 }
 
-const AuthorizationReducer = (state = initialState, action) => {
+const navBarReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_SORTING:
             return {
@@ -20,6 +21,15 @@ const AuthorizationReducer = (state = initialState, action) => {
                 minPrice: action.data.minPrice,
                 maxPrice: action.data.maxPrice
             }
+        case CLEAR_SORTING:
+            return {
+                ...state,
+                country: '',
+                firstYear: '',
+                lastYear: '',
+                minPrice: '',
+                maxPrice: ''
+            }
         default:
             return state
     }
@@ -27,5 +37,6 @@ const AuthorizationReducer = (state = initialState, action) => {
 
 export const setSorting = (data) => ({ type: SET_SORTING, data })
 
+export const clearSorting = () => ({ type: CLEAR_SORTING })
 
-export default AuthorizationReducer
+export default navBarReducer

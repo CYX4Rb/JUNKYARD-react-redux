@@ -31,10 +31,10 @@ const Header = (props) => {
                 <span> basket</span>
             </div>
         </div>
+        {<NavLink to='/products' className={style.NavLink} >Products</NavLink>}
         <NavLink to = '/authorized'>
             <img src = {authorized} alt = ''/>
         </NavLink>
-        {/* <NavLink to='/Products' className={style.NavLink} >Products</NavLink> */}
     </div>
 }
 

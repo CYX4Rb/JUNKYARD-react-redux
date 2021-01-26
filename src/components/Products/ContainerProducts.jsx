@@ -22,6 +22,6 @@ class ContainerProducts extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    product: state.Products.Cars
+    product: state.products.cars
 })
 export default connect(mapStateToProps, {})(ContainerProducts)

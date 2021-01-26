@@ -5,13 +5,14 @@
     align-items: center;
 
     padding-top: 20px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    border-radius: 0 0 10px 10px;
     width: 1200px;
     @media (max-width: 420px) {
         max-width: 100%;
     }
-    background-image: linear-gradient(to top, #a1ffff 0%, #ffffff 100%);
-
+    /* background-image: linear-gradient(to top, #a1ffff 0%, #ffffff 100%); */
+    background-color: gray;
     a {
         text-decoration: none;
         color: black;
